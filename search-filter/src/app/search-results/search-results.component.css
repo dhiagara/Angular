@@ -1,0 +1,25 @@
+.main{
+    border: 1px solid#ffd77a ;
+    background-color: 	#ffebbd;
+    padding: 25px;
+    margin: 10px;
+    
+}
+.fix{
+    color:gray;
+    padding: 5px;
+    word-wrap: break-word;         /* All browsers since IE 5.5+ */
+    overflow-wrap: break-word;     /* Renamed property in CSS3 draft spec */
+    width: 100%;
+
+}
+.tag{
+    color:gray;
+    padding: 5px;
+    
+}
+
+
+i{
+    cursor: pointer;
+}

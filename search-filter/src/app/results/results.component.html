@@ -1,0 +1,19 @@
+<div>
+  <div class="main">
+
+    <div class="select  is-small">
+      <select>
+        <option>SORT BY POPULAR </option>
+        <option>SORT BY NEWEST </option>
+      </select>
+    </div>
+    </div>
+    <br>
+    <app-search-results></app-search-results>
+    <div *ngFor="let i of t">
+      <br>
+      <div class="results">
+        <app-results-bloc> </app-results-bloc>
+      </div>
+    </div>
+  </div>

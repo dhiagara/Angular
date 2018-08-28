@@ -1,0 +1,83 @@
+
+<div style="padding:10px;border-right: 2px #e7a5a0 solid ;margin-left: .5%; margin-right: 2%; height: 100%;background:white   ;box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);">
+<div class="field ">
+      <p style="color:#c49ba8">FILTER BY</p>
+  <div class="field">
+    <div class="control ">
+    <div class="select is-warning">
+        <select>
+          <option> Name  </option>
+          <option>select length par defaut   </option>
+        </select>
+      </div>
+    </div>
+    </div>
+      <div class="field">
+      <div class="control">
+      <div class="select is-warning">
+          <select is-warning>
+            <option>Skills  </option>
+            <option>select length par defaut</option>
+            <option> skills </option>
+          </select>
+        </div>
+    </div>
+    </div>
+    </div>
+    <aside class="menu">
+        <p style="color:#c49ba8" >
+          Instituts
+        </p>
+        
+            <div class="control-group">
+                <label class="control control--checkbox"   *ngFor="let inst of instituts; let i = index">{{inst.name}}
+                    <input type="checkbox" (click)="filtrateInstitut(inst.name,i)" [checked]=inst.checked />
+                    <div class="control__indicator"></div>
+                  </label>  
+      </div>
+      <p style="color:#c49ba8" >
+          Matières
+        </p>
+        
+            <div class="control-group">
+                <label class="control control--checkbox"   *ngFor="let m of matieres; let i = index">{{m.name}}
+                  <input type="checkbox" (click)="filtrateMatiere(m.name,i)" [checked]=m.checked/>
+                  <div class="control__indicator"></div>
+                </label>          
+      </div>
+      <p style="color:#c49ba8" >
+          Concours</p>
+            <div class="control-group">
+                <label class="control control--checkbox"   *ngFor="let c of concours; let i = index">{{c.name}}
+                    <input type="checkbox" (click)="filtrateConcour(c.name,i)" [checked]=c.checked/>
+                    <div class="control__indicator"></div>
+                  </label>  
+      </div>
+        <p class="menu-label">
+          Cour1
+        </p>
+        <ul class="menu-list">
+          <li><a (click)="filtrate('Team Settings')">Team Settings</a></li>
+          <li>
+            <a (click)="filtrate('Manage Your Team')">Manage Your Team</a>
+            <ul>
+              <li (click)="filtrate('members')"><a>Members</a></li>
+              <li (click)="filtrate('Plugins')"><a>Plugins</a></li>
+              <li (click)="filtrate('add a member')" ><a>Add a member</a></li>
+            </ul>
+          </li>
+          <li (click)="filtrate('Invitation')"><a>Invitations</a></li>
+          <li (click)="filtrate('cloud')"><a>Cloud Storage Environment Settings</a></li>
+          <li (click)="filtrate('Ahthentificatiob')"><a>Authentication</a></li>
+        </ul>
+        <p class="menu-label">
+          Cour2
+        </p>
+        <ul class="menu-list">
+          <li (click)="filtrate('Payment')"><a>Payments</a></li>
+          <li (click)="filtrate('Transfers')"><a>Transfers</a></li>
+          <li (click)="filtrate('balance')"><a>Balance</a></li>
+        </ul>
+      </aside>
+</div>
+

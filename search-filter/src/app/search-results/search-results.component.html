@@ -1,0 +1,16 @@
+<div class="ma" *ngIf="!(results.length===0) ||!(res.length===0)">
+    <article class="message is-warning">
+        Results(0)
+        <div class="message-body tags">
+
+            <div class="fix" *ngIf="!(res.length===0)"> {{res}}
+                <i class="fas fa-times" (click)="deleteRes()"></i>
+            </div>
+
+            <div class="tag" *ngFor="let t of results; let i = index">
+                {{t}}
+                <i class="fas fa-times" (click)="delete(t,i)"> </i>
+            </div>
+        </div>
+    </article>
+</div>

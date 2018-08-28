@@ -1,0 +1,39 @@
+<div class="main">
+
+  <div class="card-content">
+
+
+    <div class="media">
+      <div class="media-left">
+        <figure class="image is-90x90">
+          <img src=assets\image\Datascience.jpg style="width:140px;height:90px;" alt="deep-learning" /> </figure>
+      </div>
+      <div>
+
+        <div class="media-content">
+          <h1> school of data science </h1>
+          <h2> Data science </h2>
+          <h1> in collaboration with</h1>
+          <h3> Unity, NVIDIA Deep Learning Institute</h3>
+        </div>
+      </div>
+    </div>
+    <div>
+      <hr>
+      <div class="det">
+        <ul>
+          <li>
+            <a (click)="detailView = !detailView">Details</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+
+  </div>
+  <div *ngIf='detailView' class="details">
+    <div class="p1">
+      some text detail here
+
+    </div>
